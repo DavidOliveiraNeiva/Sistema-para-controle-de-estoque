@@ -12,14 +12,15 @@ o Projeto visa criar um softwa\re capaz de armazenas dados do estoque e manipula
 ###Telas
 
 ###Cadastro de Produtos
-    - [] nome
-    - [] codigo
-    - [] categoria
-    - [] fornecedor
-    - [] valor de compra
-    - [] valor de venda
-    - [] quantidade minima
-    - [] quantidade atual
+  - [ ] Nome
+  - [ ] Codigo
+  - [ ] Categoria
+  - [ ] Fornecedor 
+  - [ ] Valor de Compra
+  - [ ] Valor de Venda
+  - [ ] Quantidade Minima
+  - [ ] Quantidade Atual
+
 
 ### Tela Inicial
 -Campos
