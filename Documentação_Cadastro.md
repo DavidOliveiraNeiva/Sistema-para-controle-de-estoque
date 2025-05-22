@@ -9,11 +9,17 @@ o Projeto visa criar um softwa\re capaz de armazenas dados do estoque e manipula
 - Banco de Dados: SQLiteStudeo
 - Controle de Versão: Git + GitHub
 
+###Telas
 
-
-
-## Telas
-
+###Cadastro de Produtos
+    - [] nome
+    - [] codigo
+    - [] categoria
+    - [] fornecedor
+    - [] valor de compra
+    - [] valor de venda
+    - [] quantidade minima
+    - [] quantidade atual
 
 ### Tela Inicial
 -Campos
