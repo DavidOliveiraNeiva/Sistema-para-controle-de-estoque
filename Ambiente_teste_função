@@ -1,0 +1,13 @@
+
+def teste(a, b):
+    return a + b
+
+
+def teste_no_sistema():
+    # 
+    assert teste(4, 5) == 9
+
+if __name__ == "__main__":
+    teste_no_sistema()
+
+    print("Teste de caixa branca passou!")
