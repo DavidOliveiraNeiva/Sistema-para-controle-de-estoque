@@ -9,37 +9,55 @@ o Projeto visa criar um softwa\re capaz de armazenas dados do estoque e manipula
 - Banco de Dados: SQLiteStudeo
 - Controle de Versão: Git + GitHub
 
-###Telas
+### REQUISITOS FUNCIONAIS
+    RF-01 – Cadastro de Produtos
+    Descrição: o sistema deve permitir que o usuário cadastre novos produtos no estoque, informando nome, código do Produto, categoria, valor de custo
+    (oculos Rayban, OC01, Oculos Premium, R$15,30)
 
-###Cadastro de Produtos
-   - [ ] Nome
-   - [ ] Codigo
-   - [ ] Categoria
-   - [ ] Fornecedor 
-   - [ ] Valor de Compra
-   - [ ] Valor de Venda
-   - [ ] Quantidade Minima
-   - [ ] Quantidade Atual
+    RF-02 – Entrada de Produtos
+    Descrição: o sistema deve permitir que o usuário Registre as entradas de novos produtos no estoque, informando código do Produto, categoria, quantidade
+    (OC01, Oculos Premium, 20)
 
+    RF-03 – Saida de Produtos
+    Descrição: o sistema deve permitir que o usuário  Registre as saidas de produtos no estoque, informando código do produto, quantidade
 
-### Tela Inicial
--Campos
-    - Nome
-    - Quantidade
-    - Valor Unitário
-    - Tipo Unitário
-    - 
+    RF-04 – Controle de Estoque Mínimo
+    Descrição: o sistema deve gerar um alerta quando o estoque esta abaixo do limite minimo estipulado.
 
-- Botões:
-    - Cadastrar
-    - Limpar
+    RF-05 – Gerar relatório
+    Descrição: o sistema deve gerar relatórios com as informações Estoque atual, Produtos que mais vendem, Historico de movimentações e exportar para PDF
 
-## Funcionalidades
-| Item          | Descrição                                   | Status       |
-|---------------|---------------------------------------------|--------------|
-| Tela inicial  | Criação da UI com botões e layout base      | Pronto |
-| Cadastro      | Formulário de novo Produto                  | A fazer      |
-| Integração    | Conexão com API ou banco de dados           | A fazer      |
+    RF-06 – Busca e Filtros de Produtos
+    Descrição: O sistema deve permitir filtrar as informações por código, categoria
+
+### REQUISITOS NÃO FUNCIONAIS (qualidade do sistema)
+    RNF01 – Interface simples e intuitiva.
+    RNF02 – Responsividade (acesso em computador, tablet, celular).
+    RNF03 – Segurança de dados (login, criptografia de senha).
+    RNF04 – Boa performance mesmo com grande volume de dados.
+
+### Diagrama de Casos de Uso
+    Mostra os atores (usuários) e o que eles podem fazer no sistema.
+    Feito em UML ou com ferramentas visuais como Draw.io, Lucidchart, etc.
+
+### Modelagem de Dados (Banco de Dados)
+    DER (Diagrama Entidade-Relacionamento): Representa tabelas, chaves, relacionamentos.
+    Dicionário de dados: Define cada campo, tipo, tamanho, se é obrigatório, etc.
+
+### Protótipo das Telas
+    Simulações visuais da interface do sistema.
+    Pode ser feito com Figma, Adobe XD, Balsamiq, ou até desenhado à mão.
+
+### Fluxo de Navegação ou Fluxograma de Processos
+    Mostra como o usuário vai navegar entre telas ou como os processos internos funcionam.
+    Útil para validar se a lógica do sistema está clara e eficiente.
+
+### Plano de Testes (opcional, mas recomendado)
+    Descreve como você vai validar se o sistema funciona corretamente.
+    Ex: Teste de cadastro de produto → Entrada: nome, preço, categoria → Esperado: produto salvo.
+
+### Cronograma (se for projeto em equipe ou TCC)
+    Datas previstas para cada fase: levantamento, modelagem, desenvolvimento, testes, entrega.
 
 ---
 
@@ -48,65 +66,31 @@ o Projeto visa criar um softwa\re capaz de armazenas dados do estoque e manipula
 - **função `cadastrar_produto()`** – envia dados para o banco de dados
 - **API_URL:** ``
 
----
+## Tarefas da Sprint
+ - [ ] Criar Banco de dados `Estoque.db`
+    - [ ] Inserir campos de nome `text`, cod_produto `text`, categoria `text`, valor_custo `int` ao criar o banco de dados
+        - Responsável: nenhum
+        - Data Prazo: 26/05
+        - Data Conclusão: -
+        - Status: a fazer
+ - [ ] Implantar Botão Salvar
+    - [ ] salvar informações no banco dados
+        - Responsável: nenhum
+        - Data Prazo: 26/05
+        - Data Conclusão: -
+        - Status: a fazer
+    - [ ] Implantar Botão Limpar (limpar campos na tela)
+        - Responsável: nenhum
+        - Data Prazo: 26/05
+        - Data Conclusão: -
+        - Status: a fazer
 
-## Tarefas da Sprint (Semana 1)
-| Tarefa                            | Responsável | Prazo     | Data Conclusão | Status       |
-|-----------------------------------|-------------|-----------|----------------|--------------|
-| Montar tela inicial (sem lógica)  | David       | 20/05     | 20/05          | Feito        |
-| Criar função valor_produto_total  | David       | 26/05     | ---            | Em andamento |
-| Documentar API                    | Você        | 25/05     | ---            | A fazer      |
-| Integrar botão "Entrar"           | Fulano      | 26/05     | ---            | A fazer      |
-
----
-
-## Regras de Commit (Git)
-- Commits claros: `feat: adiciona botão de login`
+### Regras de Commit (Git)
+- Commits claros: `adiciona botão de login`
 - Um commit por funcionalidade
-- Sempre descrever o que foi feito no PR
+- Sempre descrever o que foi feito no Pull Request
 
----
-
-## Como contribuir
-1. Puxe a branch `develop`
+### Como contribuir
+1. Puxe a branch `Main`
 2. Crie uma nova branch com seu nome e tarefa: `feature/tela-login`
-3. Faça push e envie o PR
-
-
-
----
-
-## Telas
-
-### Tela Inicial (`UI_ProjSysCtrlEstoque.ui`)
-- Botões:
-  - [ ] Cadastrar
-  - [ ] Limpar
-
----
-
-## Funcionalidades
-
-| ID  | Funcionalidade             | Descrição                                               | Status     |
-|-----|----------------------------|----------------------------------------------------------|------------|
-| F01 | Conectar botão "Entrar"    | Chamar função `fazer_login()` no backend                | A fazer    |
-| F02 | Conectar botão "Cadastrar" | Chamar função `cadastrar_usuario()`                     | A fazer    |
-| F03 | Esqueci senha              | Abrir nova janela de recuperação                        | A fazer    |
-| F04 | Sair                       | Fechar o programa                                       | A fazer    |
-
----
-
-## Backend - Conexões e Lógica
-
-### `login.py`
-```python
-def fazer_login(usuario: str, senha: str) -> bool:
-    """
-    Valida login do usuário.
-    Retorna True se o login for válido, False caso contrário.
-    """
-
-
-
-
-
+3. Faça push e envie o Pull Request
